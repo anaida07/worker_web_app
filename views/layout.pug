@@ -1,7 +1,48 @@
 doctype html
-html
+html(lang='en')
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    title Login V13
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='icon', type='image/png', href='images/icons/favicon.ico')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/util.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/main.css')
+  body(style='background-color: #999999;')
+    .limiter
+      .container-login100
+        .login100-more(style="background-image: url('images/bg-01.jpg');")
+        .wrap-login100.p-l-50.p-r-50.p-t-72.p-b-50
+          form.login100-form.validate-form
+            span.login100-form-title.p-b-59
+              | Sign Up
+            .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+              span.label-input100 Email
+              input.input100(type='text', name='email', placeholder='Email addess...', autocomplete='off')
+              span.focus-input100
+            .wrap-input100.validate-input(data-validate='Password is required')
+              span.label-input100 Password
+              input.input100(type='password', name='pass', placeholder='*************', autocomplete='off')
+              span.focus-input100
+            .wrap-input100.validate-input(data-validate='Repeat Password is required')
+              span.label-input100 Repeat Password
+              input.input100(type='password', name='repeat-pass', placeholder='*************', autocomplete='off')
+              span.focus-input100
+            .flex-m.w-full.p-b-33
+              .contact100-form-checkbox
+                label.label-checkbox100(for='ckb1')
+                  span.txt1
+                    | I agree to the
+                    a.txt2.hov1(href='#')
+                      | Terms of User
+            .container-login100-form-btn
+              .wrap-login100-form-btn
+                .login100-form-bgbtn
+                button.login100-form-btn
+                  | Sign Up
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+    script(src='js/main.js')
