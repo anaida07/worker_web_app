@@ -1,10 +1,13 @@
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
-var logger = require('morgan');
+var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const fs = require('fs');
+const expressValidator = require('express-validator');
+global.fetch = require('node-fetch');
+global.navigator = () => null;
 
 var app = express();
 var router = express.Router();
@@ -13,6 +16,15 @@ var router = express.Router();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(morgan('combined'));
+app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(expressValidator())
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Include controllers
 fs.readdirSync("controllers").forEach(function (file) {
   if(file.substr(-3) == '.js') {
@@ -20,14 +32,6 @@ fs.readdirSync("controllers").forEach(function (file) {
     route.controller(app);
   }
 })
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

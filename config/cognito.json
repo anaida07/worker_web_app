@@ -1,0 +1,7 @@
+{
+  "userPoolId": "us-east-1_4E9lDcAwA",
+  "ClientId": "3bv5ps1ij98hub1lo4cu2m2o4b",
+  "ClientSecret": "sta2upaec1mhe9rtpdarha2eb2bsu1nba9acoie083gbon32fl7",
+  "redirectURI": "http://localhost:8081",
+  "CognitoDomain": "https://sputnik.auth.us-east-1.amazoncognito.com"
+}
