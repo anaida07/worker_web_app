@@ -98,6 +98,7 @@ module.exports.controller = (app) => {
   
     cognitoUser.authenticateUser(authenticationDetails, {
       onSuccess: function (data) {
+        console.log(data);
         req.session.sub = data.idToken.payload.sub
         req.session.user_id = data.idToken.payload['custom:id']
         req.session.tokens = {
