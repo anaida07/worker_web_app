@@ -25,7 +25,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(expressValidator())
 app.use(session({
-  cookie: 604800000,
   secret: 'secret',
   resave: false,
   saveUninitialized: true
