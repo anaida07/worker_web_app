@@ -12,9 +12,8 @@
             else {
                 $(this).removeClass('has-val');
             }
-        })    
+        })
     })
-
 
     /*==================================================================
     [ Validate after type ]*/
@@ -26,7 +25,7 @@
             else {
                 $(this).parent().addClass('true-validate');
             }
-        })    
+        })
     })
 
     /*==================================================================
@@ -43,6 +42,9 @@
             }
         }
 
+        if($('.password').val().trim() != $('.re-password').val().trim()){
+            return false;
+        }
         return check;
     });
 
@@ -53,6 +55,20 @@
            $(this).parent().removeClass('true-validate');
         });
     });
+
+    $('.re-password').on('blur', function(){
+        if($(this).val().trim() != "") {
+            if($('.password').val().trim() != $(this).val().trim()){
+                $(this).parent().addClass('alert-validate');
+                $(this).parent().removeClass('true-validate');
+                $(this).parent().attr('data-validate', 'Repeat Password Mismatch')
+            } else {
+                $(this).parent().removeClass('alert-validate');
+                $(this).parent().addClass('true-validate');
+                $(this).parent().attr('data-validate', 'Repeat Password is required')
+            }
+        }
+    })
 
     function validate (input) {
         if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
@@ -78,7 +94,7 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
-    
+
 
 
 })(jQuery);

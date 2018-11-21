@@ -7,30 +7,30 @@
 
 @font-face {
   font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+  src: url('../fonts/poppins/Poppins-Regular.ttf');
 }
 
 @font-face {
   font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+  src: url('../fonts/poppins/Poppins-Medium.ttf');
 }
 
 @font-face {
   font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+  src: url('../fonts/poppins/Poppins-Bold.ttf');
 }
 
 @font-face {
   font-family: Poppins-SemiBold;
-  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf');
 }
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 
@@ -178,7 +178,7 @@ iframe {
 }
 
 .container-login100 {
-  width: 100%;  
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -202,7 +202,7 @@ iframe {
 [ Login100 more ]*/
 .login100-more {
   background-repeat: no-repeat;
-  background-position: center;
+  /* background-position: center; */
   background-size: cover;
   width: calc(100% - 520px);
   position: relative;
@@ -218,12 +218,12 @@ iframe {
   height: 100%;
   top: 0;
   left: 0;
-  background: #e8519e;
-  background: -webkit-linear-gradient(bottom, #e8519e, #c77ff2);
-  background: -o-linear-gradient(bottom, #e8519e, #c77ff2);
-  background: -moz-linear-gradient(bottom, #e8519e, #c77ff2);
-  background: linear-gradient(bottom, #e8519e, #c77ff2);
-  opacity: 0.8;
+  background: #0088bb;
+  background: -webkit-linear-gradient(bottom, #0088bb, #7fbdf2);
+  background: -o-linear-gradient(bottom, #0088bb, #7fbdf2);
+  background: -moz-linear-gradient(bottom, #0088bb, #7fbdf2);
+  background: linear-gradient(bottom, #0088bb, #7fbdf2);
+  opacity: 0.3;
 }
 
 /*==================================================================
@@ -259,7 +259,7 @@ iframe {
   width: 100%;
   position: relative;
   border-bottom: 2px solid #dbdbdb;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 }
 
 .label-input100 {
@@ -276,7 +276,7 @@ iframe {
   height: 50px;
   background: transparent;
   font-family: Poppins-Regular;
-  font-size: 22px;
+  font-size: 18px;
   color: #555555;
   line-height: 1.2;
   padding: 0 2px;
@@ -306,11 +306,11 @@ iframe {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 
-  background: #d5007d;
-  background: -webkit-linear-gradient(45deg, #d5007d, #e53935);
-  background: -o-linear-gradient(45deg, #d5007d, #e53935);
-  background: -moz-linear-gradient(45deg, #d5007d, #e53935);
-  background: linear-gradient(45deg, #d5007d, #e53935);
+  background: #0088bb;
+  background: -webkit-linear-gradient(45deg, #0088bb, #e53935);
+  background: -o-linear-gradient(45deg, #0088bb, #e53935);
+  background: -moz-linear-gradient(45deg, #0088bb, #e53935);
+  background: linear-gradient(45deg, #0088bb, #e53935);
 }
 
 
@@ -396,11 +396,11 @@ iframe {
   z-index: -1;
   width: 100%;
   height: 300%;
-  background: #e8519e;
-  background: -webkit-linear-gradient(top, #e8519e, #c77ff2, #e8519e, #c77ff2);
-  background: -o-linear-gradient(top, #e8519e, #c77ff2, #e8519e, #c77ff2);
-  background: -moz-linear-gradient(top, #e8519e, #c77ff2, #e8519e, #c77ff2);
-  background: linear-gradient(top, #e8519e, #c77ff2, #e8519e, #c77ff2);
+  background: #08b;
+  background: -webkit-linear-gradient(top, #08b, #3a457f, #08b, #3a457f);
+  background: -o-linear-gradient(top, #08b, #3a457f, #08b, #3a457f);
+  background: -moz-linear-gradient(top, #08b, #3a457f, #08b, #3a457f);
+  background: linear-gradient(top, #08b, #3a457f, #08b, #3a457f);
   bottom: -100%;
   left: 0;
 
