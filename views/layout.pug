@@ -11,8 +11,15 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='/stylesheets/util.css')
     link(rel='stylesheet', type='text/css', href='/stylesheets/main.css')
   body
+    - if (messages.info)
+      .message.info
+        span= messages.info
     block content
     script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
     script(src='js/main.js')
+    script.
+      setTimeout(function() {
+      $('.message').fadeOut('fast');
+      }, 30000)

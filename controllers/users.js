@@ -43,20 +43,18 @@ module.exports.controller = (app) => {
 
     const options = {
       uri: "http://wis-ecs-services-425328152.us-east-1.elb.amazonaws.com/worker",
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
       method: 'POST',
-      data: {
+      body: {
         email: email,
         password: password
-      }
+      },
+      json: true
     };
     rp(options)
       .then(function (data) {
-        data = JSON.parse(data)
+        // data = JSON.parse(data)
         // console.log("Data::"+JSON.stringify(data));
-        // console.log(data);
+        console.log(data);
         const idData = {
           Name: 'custom:id',
           Value: data['Id']
@@ -111,10 +109,10 @@ module.exports.controller = (app) => {
         res.redirect('/home');
       },
       onFailure: function (error) {
-        console.log('error');
-        console.log(error);
-        req.session['log-in-errors'].push(error.message)
-        res.redirect('/?errors')
+        // req.session['log-in-errors'].push(error.message);
+        // console.log(error.message);
+        req.flash('info', error.message);
+        res.redirect('/users/login')
         // res.status(422).send(error.message)
         // res.status(422);
         // res.send({ error: 'Username or password incorrect!' });
