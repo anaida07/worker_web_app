@@ -1,7 +1,7 @@
 module.exports.controller = (app) => {
 
-  // register a user
+  // register page
   app.get('/', (req, res) => {
-    res.render('index', { title: "Express"})
+    res.render('index')
   });
 };

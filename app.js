@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+const session = require('express-session');
 const fs = require('fs');
 const expressValidator = require('express-validator');
 global.fetch = require('node-fetch');
@@ -20,9 +21,15 @@ app.set('view engine', 'pug');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(expressValidator())
+app.use(session({
+  cookie: 604800000,
+  secret: 'secret',
+  resave: false,
+  saveUninitialized: true
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Include controllers

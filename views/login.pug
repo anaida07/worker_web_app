@@ -5,9 +5,9 @@ block content
     .container-login100
       .login100-more(style="background-image: url('images/bg-01.jpg');")
       .wrap-login100.p-l-50.p-r-50.p-t-72.p-b-50
-        form(method='POST' action='/users/register').login100-form.validate-form
+        form(method='POST' action='/users/login').login100-form.validate-form
           span.login100-form-title.p-b-59
-            | Sign Up
+            | Login
           .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
             span.label-input100 Email
             input.input100(type='text', name='email', placeholder='Email addess...', autocomplete='off')
@@ -16,19 +16,8 @@ block content
             span.label-input100 Password
             input.input100(type='password', name='password', placeholder='*************', autocomplete='off')
             span.focus-input100
-          .wrap-input100.validate-input(data-validate='Repeat Password is required')
-            span.label-input100 Repeat Password
-            input.input100(type='password', name='repeat-pass', placeholder='*************', autocomplete='off')
-            span.focus-input100
-          .flex-m.w-full.p-b-33
-            .contact100-form-checkbox
-              label.label-checkbox100(for='ckb1')
-                span.txt1
-                  | I agree to the
-                  a.txt2.hov1(href='#')
-                    | Terms of User
           .container-login100-form-btn
             .wrap-login100-form-btn
               .login100-form-bgbtn
               button.login100-form-btn
-                | Sign Up
+                | Login
