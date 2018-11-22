@@ -106,7 +106,7 @@ module.exports.controller = (app) => {
                                 refreshToken: data.refreshToken.token,
                                 accessToken: data.accessToken.jwtToken
                               }
-        // res.send({ data: data });
+        // res.send({ data: data, user_id: data.idToken.payload['custom:id'] });
         res.redirect('/home');
       },
       onFailure: function (error) {
