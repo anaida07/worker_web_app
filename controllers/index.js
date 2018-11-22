@@ -5,4 +5,8 @@ module.exports.controller = (app) => {
     console.log(req.session);
     res.render('index')
   });
+
+  app.get('/service_status', (req, res) => {
+    res.send('All Good')
+  });
 };
