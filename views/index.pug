@@ -8,6 +8,10 @@ block content
         form(method='POST' action='/users/register').login100-form.validate-form
           span.login100-form-title.p-b-35
             | Sign Up
+          .wrap-input100.validate-input(data-validate='Fullname is required')
+            span.label-input100 Fullname
+            input.input100(type='text', name='fullname', placeholder='Fullname', autocomplete='off')
+            span.focus-input100
           .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
             span.label-input100 Email
             input.input100(type='text', name='email', placeholder='Email addess...', autocomplete='off')

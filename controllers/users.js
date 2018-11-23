@@ -16,6 +16,7 @@ module.exports.controller = (app) => {
   
   // register a user
   app.post('/users/register', (req, res) => {
+    const fullname = req.body.fullname;
     const email = req.body.email;
     const password = req.body.password;
     const confirmPassword = req.body.confirm_password;
@@ -45,6 +46,7 @@ module.exports.controller = (app) => {
       uri: "http://wis-ecs-services-425328152.us-east-1.elb.amazonaws.com/worker",
       method: 'POST',
       body: {
+        fullname: fullname,
         email: email
       },
       json: true
