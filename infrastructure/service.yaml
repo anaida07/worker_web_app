@@ -77,9 +77,9 @@ Resources:
       Cpu: "256"
       Memory: "512"
       ExecutionRoleArn:
-        Fn::Join: [':', [ !Ref EnvironmentName, ECSTaskRole.Arn ]]
+        !GetAtt ECSTaskRole.Arn
       TaskRoleArn:
-        Fn::Join: [':', [ !Ref EnvironmentName, ECSServiceExecutionRole.Arn ]]
+        !GetAtt ECSServiceExecutionRole.Arn
       Family: !Sub wwa-srv-task-${EnvironmentName}
       NetworkMode: awsvpc
       RequiresCompatibilities:
