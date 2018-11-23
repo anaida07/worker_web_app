@@ -45,8 +45,7 @@ module.exports.controller = (app) => {
       uri: "http://wis-ecs-services-425328152.us-east-1.elb.amazonaws.com/worker",
       method: 'POST',
       body: {
-        email: email,
-        password: password
+        email: email
       },
       json: true
     };
