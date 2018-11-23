@@ -549,7 +549,7 @@ iframe {
 
 /*//////////////////////////////////////////////////////////////////
 [ Error messages ]*/
-.message {
+#message {
   position: absolute;
   z-index: 1000;
   color: #fff;
@@ -557,6 +557,10 @@ iframe {
   right: 0;
 }
 
-.message.info {
-  background: #1abc9c;
+#message.info {
+  background: #e4807e;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
