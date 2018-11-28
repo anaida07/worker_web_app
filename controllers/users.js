@@ -70,7 +70,8 @@ module.exports.controller = (app) => {
             req.session['sign-up-errors'].push(err.message.replace('Password did not conform with policy:',''));
             return res.redirect('/')
           }
-          return res.redirect('/users/login');
+          req.flash('info', 'You are successfully signed up! Please verify your email before proceeding.');
+          res.redirect('/users/login')
         })
       })
       .catch (function (err) {
@@ -113,7 +114,7 @@ module.exports.controller = (app) => {
       onFailure: function (error) {
         // req.session['log-in-errors'].push(error.message);
         // console.log(error.message);
-        req.flash('info', error.message);
+        req.flash('error', error.message);
         res.redirect('/users/login')
         // res.status(422).send(error.message)
         // res.status(422);

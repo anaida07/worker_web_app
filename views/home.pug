@@ -8,7 +8,7 @@ block content
           .col-12.text-right
             a.link-downlaod.sign-out(href="/users/sign_out") Sign out
           br
-          span.login100-form-title.p-b-59.text-center
+          span.login100-form-title.p-b-59
             .row
               .col-12
                 | Welcome
@@ -16,16 +16,18 @@ block content
                 | #{user.fullname}
             .row
               .col-12
-                span.txt3.p-b-35
+                span.txt3
+                  | Download the application for your preferred operating system to start working.
+                  br
                   | Download Cloud Worker Hub
             .row.m-t-25
-              .col-6
+              .col-6.p-t-5
                 img.img-download.m-b-10(src='/images/apple-logo.svg' alt='Download for Mac' width="50")
-                a.link-downlaod(href='https://efef9d6ccfca0ae2ae203ba2c821ff0f.s3.amazonaws.com/build/WorkStream/stable/mac/70.0.0.0/Cloud_Worker_Hub-0.1.0.dmg' download='')
+                a.link-downlaod.m-t-15(href='https://efef9d6ccfca0ae2ae203ba2c821ff0f.s3.amazonaws.com/build/WorkStream/stable/mac/70.0.0.0/Cloud_Worker_Hub-0.1.0.dmg' download='')
                   i.fa.fa-download.p-r-10
                   | Mac
               .col-6.p-t-5
                 img.img-download(src='/images/windows-logo.png' alt='Download for Window' width="50")
                 a.link-downlaod.m-t-15(href='https://efef9d6ccfca0ae2ae203ba2c821ff0f.s3.amazonaws.com/build/WorkStream/stable/mac/70.0.0.0/Cloud_Worker_Hub_Setup_0.1.0.exe' download='')
                   i.fa.fa-download.p-r-10
-                  | Window
+                  | Windows

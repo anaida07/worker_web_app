@@ -14,23 +14,12 @@ html(lang='en')
     - if (messages.info)
       #message.info
         span= messages.info
+    - if (messages.error)
+      #message.error
+        span= messages.error
     block content
     script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
     script(src='/js/main.js')
-    script.
-      var fadeTarget = document.getElementById("message");
-      if (fadeTarget) {
-        var fadeEffect = setInterval(function () {
-          if (!fadeTarget.style.opacity) {
-            fadeTarget.style.opacity = 1;
-          }
-          if (fadeTarget.style.opacity > 0) {
-            fadeTarget.style.opacity -= 0.1;
-          } else {
-            clearInterval(fadeEffect);
-          }
-        }, 300);
-      }
       

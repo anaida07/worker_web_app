@@ -169,7 +169,8 @@ iframe {
 
 .img-download {
   display: block;
-  margin: 0 auto;
+  min-height: 65px;
+  margin: 0 30px;
 }
 
 .link-downlaod {
@@ -177,6 +178,9 @@ iframe {
   background: #2771da;
   color: #fff;
   display: inline-block;
+  border-radius: 5px;
+  width: 130px;
+  text-align: center;
 }
 
 .link-downlaod:hover {
@@ -269,6 +273,10 @@ iframe {
   color: #333333;
   line-height: 1.2;
   text-align: left;
+}
+
+.login100-form-title .txt3 {
+  line-height: 20px;
 }
 
 
@@ -564,9 +572,44 @@ iframe {
 }
 
 #message.info {
+  background: #1abc9c;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#message.error {
   background: #e4807e;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+#message {
+  -moz-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Firefox */
+  -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Opera */
+  animation: cssAnimation 0s ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+  to {
+    width:0;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
+  }
+}
+@-webkit-keyframes cssAnimation {
+  to {
+    width:0;
+    height:0;
+    visibility:hidden;
+  }
 }
