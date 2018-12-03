@@ -1,7 +1,11 @@
-FROM node:10
+FROM amazonlinux:2
 
 # Create app directory
 WORKDIR /usr/src/app
+
+RUN yum install git -y
+RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+RUN yum install -y nodejs
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
