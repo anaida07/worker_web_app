@@ -91,7 +91,7 @@
     function showValidate(input) {
         var thisAlert = $(input).parent();
         if($(input).attr('type') == 'password' && $(input).val().trim().length !== 0) {
-            $(input).parent().attr('data-validate', 'Must have atleast 8 characters and contain a number, an uppercase letter and a special character')
+            $(input).parent().attr('data-validate', 'Atleast 8 characters with a number, an uppercase letter and a special character')
         }
         $(thisAlert).addClass('alert-validate');
     }
